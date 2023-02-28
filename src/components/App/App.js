@@ -32,20 +32,14 @@ function App() {
         <h1 className="header">VanGo</h1>
       </div>
       <Switch>
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <Fragment>
-              <Form />
-              <Works vanGoghWorks={vanGoghData} />
-            </Fragment>
+        <Route exact path="/" render={() => (
+          <Fragment>
+            <Form />
+            <Works vanGoghWorks={vanGoghData} />
+          </Fragment>
           )}
         />
-        <Route
-          exacth
-          path="/:workId"
-          render={({ match }) => {
+        <Route exact path="/:workId" render={({ match }) => {
             return <CardDetails workID={match.params.workId} />;
           }}
         />
