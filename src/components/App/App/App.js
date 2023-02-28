@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 import { fetchVanGoghData } from "../../../APICalls/apiCalls";
 import "./App.css";
@@ -12,15 +12,17 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const getVanGoghWorks = () => {
-    setLoading(true);
     fetchVanGoghData()
       .then((data) => setVanGoghData(data))
       .catch((err) => setError(err));
   };
 
   useEffect(() => {
+    setLoading(true)
     getVanGoghWorks();
+    setLoading(false);
   }, []);
+  console.log(vanGoghData)
 
   return (
     <div>
@@ -28,12 +30,14 @@ function App() {
         <img src={icon} alt="Van Gogh Sunflowers" className="logo"/>
         <h1 className="header">VanGo</h1>
       </div>
-      <Switch>
-        <Route exact path="/" render={() => <Form />} />
-        {/* <Route exact path="/" render={() => <Works vanGoghWorks={vanGoghData}/>} /> */}
-      </Switch>
+      <Route exact path="/" render={() => 
+      <Fragment>
+        <Form />
+        <Works vanGoghWorks={vanGoghData}/>
+      </Fragment>
+      } />
     </div>
-  );
+  )
 }
 
 export default App;
