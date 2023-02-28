@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  fetchVanGoghData,
-  fetchIndividualWork,
-} from "../../../APICalls/apiCalls";
+import { fetchVanGoghData } from "../../../APICalls/apiCalls";
 import "./App.css";
 
 function App() {
