@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
 import { fetchVanGoghData } from "../../../APICalls/apiCalls";
 import "./App.css";
+import icon from "../../../assets/logo.jpg"
 
 function App() {
   const [vanGoghData, setVanGoghData] = useState([]);
@@ -20,7 +22,11 @@ function App() {
 
   return (
     <div>
-      <Switch></Switch>
+      <div className="header-container">
+        <img src={icon} alt="Van Gogh Sunflowers" className="logo"/>
+        <h1 className="header">VanGo</h1>
+      </div>
+      <Route exact path="/vanGo/" render={() => <Works vanGoghWorks={vanGoghData}/>} />
     </div>
   );
 }
