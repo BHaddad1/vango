@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Card() {
+export function Card({ id, image, title }) {
 
   return (
-    <div>
-      <img />
-      <p></p>
+    <div className="card">
+      <img src={image} alt="A Van Gogh work" className="card-image"/>
+      <p className="card-title">{title}</p>
     </div>
   )
 }
