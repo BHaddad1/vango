@@ -4,6 +4,7 @@ import { fetchVanGoghData } from "../../../APICalls/apiCalls";
 import "./App.css";
 import icon from "../../../assets/logo.jpg"
 import Form from "../../Form/Form";
+import Works from "../../Works/Works";
 
 function App() {
   const [vanGoghData, setVanGoghData] = useState([]);
@@ -27,8 +28,10 @@ function App() {
         <img src={icon} alt="Van Gogh Sunflowers" className="logo"/>
         <h1 className="header">VanGo</h1>
       </div>
-      <Route exact path="/vanGo/" render={() => <Works vanGoghWorks={vanGoghData}/>} />
-      <Route exact path="/vanGo/" render={() => <Form />} />
+      <Switch>
+        <Route exact path="/" render={() => <Form />} />
+        {/* <Route exact path="/" render={() => <Works vanGoghWorks={vanGoghData}/>} /> */}
+      </Switch>
     </div>
   );
 }
