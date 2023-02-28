@@ -7,7 +7,7 @@ export default function Works({ vanGoghWorks }) {
 const mappedVanGoghWorks = vanGoghWorks.map(work => {
   return (
     <div key={work.objectID}>
-      <Link>
+      <Link to={`/${work.objectID}`}>
         <Card 
           id={work.objectID}
           image={work.primaryImage}
