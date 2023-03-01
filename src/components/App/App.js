@@ -31,20 +31,19 @@ function App() {
   useEffect(() => {
     getVanGoghWorks();
   }, []);
-  console.log(vanGoghData);
+  // console.log(vanGoghData);
 
-  const updateFavorite = (id) => {
-    const foundWork = vanGoghData
+  const updateFavorite = (id, favorited) => {
+   vanGoghData
     .map(work => {
       if (work.objectID === id) {
-       return {...work, isFavorited: !work.isFavorited}
+       return {...work, isFavorited: favorited}
       } return work;
     })
-    .find(work => work.objectID === id)
-    console.log("foundWork", foundWork)
-    setFavoritedWorks([...favoritedWorks, foundWork]);
-    const noDuplicates = [...new Set(favoritedWorks)]
-    console.log(noDuplicates);
+    console.log("current work is favorited?", vanGoghData.find(work => work.objectID === id).isFavorited)
+    const favorites = vanGoghData.filter(work => work.isFavorited)
+    console.log("faves", favorites)
+    setFavoritedWorks(favorites);
   }
 
   return (
