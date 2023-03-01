@@ -34,14 +34,17 @@ function App() {
   console.log(vanGoghData);
 
   const updateFavorite = (id) => {
-    const foundWork = vanGoghData.map(work => {
+    const foundWork = vanGoghData
+    .map(work => {
       if (work.objectID === id) {
        return {...work, isFavorited: !work.isFavorited}
       } return work;
-    });
-    const favorite = foundWork.find(work => work.objectID === id)
-    console.log("favoritedWork", favorite);
-    setFavoritedWorks([...favoritedWorks, favorite]);
+    })
+    .find(work => work.objectID === id)
+    console.log("foundWork", foundWork)
+    setFavoritedWorks([...favoritedWorks, foundWork]);
+    const noDuplicates = [...new Set(favoritedWorks)]
+    console.log(noDuplicates);
   }
 
   return (
