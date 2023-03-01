@@ -5,11 +5,7 @@ export default function CardDetails({ workData, updateFavorite }) {
 
   const [favorite, setFavorite] = useState(false);
 
-  useEffect(() => {
-    updateFavorite(workData.objectID);
-  }, [favorite])
-
-  console.log(workData);
+  // console.log(workData);
 
   return (
     <div>
@@ -24,7 +20,12 @@ export default function CardDetails({ workData, updateFavorite }) {
             type="checkbox"
             name="favorite"
             checked={favorite}
-            onChange={event => setFavorite(event.target.checked)}
+            onChange={event => {
+              setFavorite(event.target.checked);
+              console.log("favorite in onChange", favorite)
+              updateFavorite(workData.objectID, !favorite);
+              console.log("event.target.checked", event.target.checked);
+            }}
           />Favorite this work
         </label>
       </div>
