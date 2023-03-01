@@ -1,12 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CardDetails({ workData }) {
 
   console.log(workData);
   return (
     <div>
-      <img src={workData.primaryImage} alt={workData.title} className="primary-img"/>
-      <h2 className="title-details">Title: {workData.title} by {workData.artistDisplayName}</h2>
+      <div className="button-container">
+        <Link to="/">
+          <button className="back-button">Back Home</button>
+        </Link>
+      </div>
+      <img src={workData.primaryImageSmall} alt={workData.title} className="primary-img"/>
+      <h2 className="title-details">{workData.title} by {workData.artistDisplayName}</h2>
       <p className="work-details">Gallery Number: {workData.GalleryNumber}</p>
       <p className="work-details">Accession Year: {workData.accessionYear}</p>
       <p className="work-details">Dimensions: {workData.dimensions}</p>
