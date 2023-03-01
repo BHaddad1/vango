@@ -38,6 +38,7 @@ function App() {
           <Fragment>
             <Form />
             {loading && <img src={loadingGif} alt="loading gif"/>}
+            {loading && <p className="loading-message">Loading, please hold.</p>}
             <Works vanGoghWorks={vanGoghData} />
           </Fragment>
           )}
