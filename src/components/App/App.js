@@ -40,7 +40,8 @@ function App() {
           )}
         />
         <Route exact path="/:workId" render={({ match }) => {
-            return <CardDetails workID={match.params.workId} />;
+          const foundWork = vanGoghData.find(work => work.objectID === +match.params.workId)
+            return <CardDetails workID={match.params.workId} workData={foundWork} />;
           }}
         />
       </Switch>
