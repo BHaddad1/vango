@@ -6,22 +6,24 @@ import icon from "../../assets/logo.jpg";
 import Form from "../Form/Form";
 import Works from "../Works/Works";
 import CardDetails from "../CardDetails/CardDetails";
+import loadingGif from "../../assets/loadingGif.webp";
 
 function App() {
   const [vanGoghData, setVanGoghData] = useState([]);
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const getVanGoghWorks = () => {
     fetchVanGoghData()
-      .then((data) => setVanGoghData(data))
+      .then((data) => {
+        setVanGoghData(data);
+        setLoading(false);
+      })
       .catch((err) => setError(err));
   };
 
   useEffect(() => {
-    setLoading(true);
     getVanGoghWorks();
-    setLoading(false);
   }, []);
   console.log(vanGoghData);
 
@@ -35,6 +37,7 @@ function App() {
         <Route exact path="/" render={() => (
           <Fragment>
             <Form />
+            {loading && <img src={loadingGif} alt="loading gif"/>}
             <Works vanGoghWorks={vanGoghData} />
           </Fragment>
           )}
