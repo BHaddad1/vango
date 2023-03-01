@@ -40,14 +40,14 @@ export const fetchVanGoghData = () => {
     fetchIndividualWork(436882),
     fetchIndividualWork(436176),
     fetchIndividualWork(276299),
-    fetchIndividualWork(231788),
     fetchIndividualWork(437394),
     fetchIndividualWork(437042),
     fetchIndividualWork(335535),
     fetchIndividualWork(459299),
-    fetchIndividualWork(336555),
     fetchIndividualWork(749639),
-    fetchIndividualWork(437393)
+    fetchIndividualWork(875741),
+    fetchIndividualWork(761395),
+    fetchIndividualWork(419570),
   ])
 };
 
