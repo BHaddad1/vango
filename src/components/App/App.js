@@ -14,6 +14,7 @@ function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [favoritedWorks, setFavoritedWorks] = useState([]);
+  const [filteredWorks, setFilteredWorks] = useState([]);
 
   const getVanGoghWorks = () => {
     fetchVanGoghData()
@@ -22,8 +23,9 @@ function App() {
         //   work.isFavorited = false;
         //   return work;
         // })
-        setVanGoghData(data)
-        setLoading(false)
+        setVanGoghData(data);
+        setFilteredWorks(data);
+        setLoading(false);
       })
       .catch((err) => setError(err))
   }
@@ -31,7 +33,6 @@ function App() {
   useEffect(() => {
     getVanGoghWorks()
   }, [])
-  // console.log(vanGoghData);
 
   const updateFavorite = (id, isChecked) => {
     vanGoghData.map((work) => {
@@ -41,9 +42,13 @@ function App() {
       }
       return work
     })
-    // when adding to favorites array, check that key exists
     const favorites = vanGoghData.filter((work) => work.isFavorited)
     setFavoritedWorks(favorites)
+  }
+
+  const filterWorks = (title) => {
+    const filteredWorks = vanGoghData.filter(work => work.title.toLowerCase().includes(title.toLowerCase()));
+    setFilteredWorks(filteredWorks);
   }
 
   return (
@@ -58,10 +63,10 @@ function App() {
       <Switch>
         <Route exact path="/" render={() => (
           <Fragment>
-            <Form />
+            <Form filterWorks={filterWorks}/>
             {loading && <img src={loadingGif} alt="loading gif"/>}
             {loading && <p className="loading-message">Loading, please hold.</p>}
-            <Works vanGoghWorks={vanGoghData} />
+            <Works vanGoghWorks={filteredWorks} updateFavorite={updateFavorite} />
           </Fragment>
           )}
         />
