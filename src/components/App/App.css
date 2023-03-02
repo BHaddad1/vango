@@ -15,3 +15,8 @@
 .header {
   color: #cfe4ff;
 }
+
+.loading-gif,
+.loading-message {
+  margin-left: 45%;
+}
