@@ -36,10 +36,10 @@
 }
 
 .button-container-details {
-  height: 15vh;
+  height: 10vh;
   background-color: #c1121f;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  padding-top: 5%;
 }
