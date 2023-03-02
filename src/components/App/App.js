@@ -18,33 +18,32 @@ function App() {
   const getVanGoghWorks = () => {
     fetchVanGoghData()
       .then((data) => {
-        data.map(work => {
-          work.isFavorited = false;
-          return work;
-        })
-        setVanGoghData(data);
-        setLoading(false);
+        // data.map(work => {
+        //   work.isFavorited = false;
+        //   return work;
+        // })
+        setVanGoghData(data)
+        setLoading(false)
       })
-      .catch((err) => setError(err));
-  };
+      .catch((err) => setError(err))
+  }
 
   useEffect(() => {
-    getVanGoghWorks();
-  }, []);
-  console.log(vanGoghData);
+    getVanGoghWorks()
+  }, [])
+  // console.log(vanGoghData);
 
-  const updateFavorite = (id) => {
-    const foundWork = vanGoghData
-    .map(work => {
+  const updateFavorite = (id, isChecked) => {
+    vanGoghData.map((work) => {
       if (work.objectID === id) {
-       return {...work, isFavorited: !work.isFavorited}
-      } return work;
+        work.isFavorited = !isChecked
+        return { ...work }
+      }
+      return work
     })
-    .find(work => work.objectID === id)
-    console.log("foundWork", foundWork)
-    setFavoritedWorks([...favoritedWorks, foundWork]);
-    const noDuplicates = [...new Set(favoritedWorks)]
-    console.log(noDuplicates);
+    // when adding to favorites array, check that key exists
+    const favorites = vanGoghData.filter((work) => work.isFavorited)
+    setFavoritedWorks(favorites)
   }
 
   return (

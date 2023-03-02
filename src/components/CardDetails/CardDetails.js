@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function CardDetails({ workData, updateFavorite }) {
 
-  const [favorite, setFavorite] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
-  useEffect(() => {
-    updateFavorite(workData.objectID);
-  }, [favorite])
-
-  console.log(workData);
+  const handleOnChange = () => {
+    setIsChecked(!isChecked)
+    updateFavorite(workData.objectID, isChecked)
+  }
 
   return (
     <div>
@@ -20,12 +19,13 @@ export default function CardDetails({ workData, updateFavorite }) {
       </div>
       <div>
         <label>
-          <input 
+          <input
             type="checkbox"
             name="favorite"
-            checked={favorite}
-            onChange={event => setFavorite(event.target.checked)}
-          />Favorite this work
+            checked={isChecked}
+            onChange={handleOnChange}
+          />
+          Favorite this work
         </label>
       </div>
       <img src={workData.primaryImage} alt={workData.title} className="primary-img"/>
