@@ -17,23 +17,27 @@ export default function Form({ filterWorks }) {
           <button className="favorites-button">Favorites</button>
         </div>
       </Link>
-      <input 
-        type="text"
-        name="workTitle"
-        className="input"
-        placeholder="Search for a Van Gogh by title"
-        value={workTitle}
-        onChange={event => {
-          setWorkTitle(event.target.value);
+      <div className="search-container"> 
+      <label>
+        <input 
+          type="text"
+          name="workTitle"
+          className="input"
+          placeholder="Search for a Van Gogh by title"
+          value={workTitle}
+          onChange={event => {
+            setWorkTitle(event.target.value);
+          }}
+        />  
+      </label>
+        <button 
+        className="clear-button"
+        onClick={(event) => {
+          event.preventDefault();
+          setWorkTitle("");
         }}
-      />  
-      <button 
-      className="clear-button"
-      onClick={(event) => {
-        event.preventDefault();
-        setWorkTitle("");
-      }}
-      >Clear</button>
+        >Clear</button>
+      </div>
     </form>
   )
 }

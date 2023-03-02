@@ -5,8 +5,13 @@
   justify-content: center;
   height: 28vh;
   width: 100vw;
+  background-color: #333;
 }
 
 .logo {
-  height: 30vh;
+  height: 28vh;
+}
+
+.header {
+  color: #cfe4ff
 }
