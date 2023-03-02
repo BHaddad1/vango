@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "../Card/Card";
 import "./Works.css";
 
-export default function Works({ vanGoghWorks, updateFavorite }) {
+export default function Works({ vanGoghWorks }) {
 
   const mappedVanGoghWorks = vanGoghWorks.filter(work => work.primaryImage).map(work => {
     return (
@@ -11,7 +11,6 @@ export default function Works({ vanGoghWorks, updateFavorite }) {
             id={work.objectID}
             image={work.primaryImageSmall}
             title={work.title}
-            updateFavorite={updateFavorite}
             workData={work}
           />
       </div>

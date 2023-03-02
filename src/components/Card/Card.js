@@ -3,40 +3,10 @@ import { Link } from "react-router-dom";
 import "./Card.css";
 
 
-export function Card({ id, image, title, updateFavorite, workData }) {
-
-  const [isChecked, setIsChecked] = useState(workData.isFavorited);
-
-  const handleOnChange = () => {
-    setIsChecked(!isChecked);
-    updateFavorite(id, isChecked);
-  }
+export function Card({ id, image, title }) {
 
   return (
     <div className="card">
-       {!isChecked && <div className="favorite">
-        <label>
-          <input
-            type="checkbox"
-            name="isChecked"
-            checked={isChecked}
-            onChange={handleOnChange}
-          />
-          Add to Favorites
-        </label>
-      </div>}
-      {isChecked && <div className="favorite">
-        <label>
-          <input
-            type="checkbox"
-            name="isChecked"
-            checked={isChecked}
-            onChange={handleOnChange}
-            className="favorite"
-          />
-          Remove from Favorites
-        </label>
-      </div>}
       <Link to={`/${id}`}>
         <img src={image} alt="A Van Gogh work" className="card-image"/>
         <p className="card-title">{title}</p>
