@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Card.css";
 
 
 export function Card({ id, image, title, updateFavorite }) {
@@ -13,19 +14,18 @@ export function Card({ id, image, title, updateFavorite }) {
 
   return (
     <div className="card">
-       {!isChecked && <div>
+       {!isChecked && <div className="favorite">
         <label>
           <input
             type="checkbox"
             name="favorite"
             checked={isChecked}
             onChange={handleOnChange}
-            className="favorite"
           />
           Add to Favorites
         </label>
       </div>}
-      {isChecked && <div>
+      {isChecked && <div className="favorite">
         <label>
           <input
             type="checkbox"
