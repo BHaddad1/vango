@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Form.css";
 
 export default function Form({ filterWorks }) {
 
@@ -9,20 +10,22 @@ export default function Form({ filterWorks }) {
   }, [workTitle])
 
   return (
-    <form>
+    <form className="form-container">
       <input 
         type="text"
+        name="workTitle"
+        className="input"
         placeholder="Search for a Van Gogh by title"
         value={workTitle}
         onChange={event => {
           setWorkTitle(event.target.value);
-          // filterWorks(event.target.value);
         }}
       />  
-      <button onClick={(event) => {
+      <button 
+      className="form-button"
+      onClick={(event) => {
         event.preventDefault();
         setWorkTitle("");
-        // filterWorks("");
       }}
       >Clear</button>
     </form>
