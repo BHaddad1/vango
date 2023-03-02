@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Form() {
+export default function Form({ filterWorks }) {
+
   const [workTitle, setWorkTitle] = useState("");
+
+  useEffect(() => {
+    filterWorks(workTitle);
+  }, [workTitle])
 
   return (
     <form>
@@ -9,9 +14,17 @@ export default function Form() {
         type="text"
         placeholder="Search for a Van Gogh by title"
         value={workTitle}
-        onChange={event => setWorkTitle(event.target.value)}
+        onChange={event => {
+          setWorkTitle(event.target.value);
+          // filterWorks(event.target.value);
+        }}
       />  
-      <button onClick={() => setWorkTitle("")}>Clear</button>
+      <button onClick={(event) => {
+        event.preventDefault();
+        setWorkTitle("");
+        // filterWorks("");
+      }}
+      >Clear</button>
     </form>
   )
 }
