@@ -1,13 +1,13 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import { fetchVanGoghData } from "../../APICalls/apiCalls";
-import "./App.css";
 import icon from "../../assets/logo.jpg";
 import Form from "../Form/Form";
 import Works from "../Works/Works";
 import CardDetails from "../CardDetails/CardDetails";
 import loadingGif from "../../assets/loadingGif.webp";
 import { Favorites } from "../Favorites/Favorites";
+import "./App.css";
 
 function App() {
   const [vanGoghData, setVanGoghData] = useState([]);
@@ -19,10 +19,6 @@ function App() {
   const getVanGoghWorks = () => {
     fetchVanGoghData()
       .then((data) => {
-        // data.map(work => {
-        //   work.isFavorited = false;
-        //   return work;
-        // })
         setVanGoghData(data);
         setFilteredWorks(data);
         setLoading(false);
@@ -56,14 +52,11 @@ function App() {
       <div className="header-container">
         <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
         <h1 className="header">VanGo</h1>
-        <Link to="/favorites">
-          <button>Favorites</button>
-        </Link>
       </div>
       <Switch>
         <Route exact path="/" render={() => (
           <Fragment>
-            <Form filterWorks={filterWorks}/>
+            <Form filterWorks={filterWorks} />
             {loading && <img src={loadingGif} alt="loading gif"/>}
             {loading && <p className="loading-message">Loading, please hold.</p>}
             <Works vanGoghWorks={filteredWorks} updateFavorite={updateFavorite} />

@@ -1,0 +1,20 @@
+.button-container-faves {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #c1121f;
+  padding-top: 5%;
+}
+
+.back-button-faves {
+  height: 4.5vh;
+  width: 10vw;
+  background-color: #c1121f;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  margin-top: 25%;
+  font-size: 20px;
+}

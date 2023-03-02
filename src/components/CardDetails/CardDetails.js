@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./CardDetails.css";
 
 export default function CardDetails({ workData, updateFavorite }) {
 
@@ -13,37 +14,36 @@ export default function CardDetails({ workData, updateFavorite }) {
   }
 
   return (
-    <div>
+    <div className="details-container">
       <div className="button-container">
         <Link to="/">
           <button className="back-button">Back Home</button>
         </Link>
       </div>
       {!isChecked && <div>
-        <label>
+        <label className="favorite-details">
           <input
             type="checkbox"
             name="favorite"
             checked={isChecked}
             onChange={handleOnChange}
-            className="favorite"
+            className="favorite-details"
           />
           Add to Favorites
         </label>
       </div>}
       {isChecked && <div>
-        <label>
+        <label className="favorite-details">
           <input
             type="checkbox"
             name="favorite"
             checked={isChecked}
             onChange={handleOnChange}
-            className="favorite"
           />
           Remove from Favorites
         </label>
       </div>}
-      <img src={workData.primaryImage} alt={workData.title} className="primary-img"/>
+      <img src={workData.primaryImageSmall} alt={workData.title} className="primary-img"/>
       <h2 className="title-details">{workData.title} by {workData.artistDisplayName}</h2>
       <p className="work-details">Gallery Number: {workData.GalleryNumber}</p>
       <p className="work-details">Accession Year: {workData.accessionYear}</p>

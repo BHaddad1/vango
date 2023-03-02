@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./Form.css";
 
 export default function Form({ filterWorks }) {
 
@@ -9,22 +11,33 @@ export default function Form({ filterWorks }) {
   }, [workTitle])
 
   return (
-    <form>
-      <input 
-        type="text"
-        placeholder="Search for a Van Gogh by title"
-        value={workTitle}
-        onChange={event => {
-          setWorkTitle(event.target.value);
-          // filterWorks(event.target.value);
+    <form className="form-container">
+       <Link to="/favorites">
+        <div className="favorites-button-container">
+          <button className="favorites-button">Favorites</button>
+        </div>
+      </Link>
+      <div className="search-container"> 
+      <label>
+        <input 
+          type="text"
+          name="workTitle"
+          className="input"
+          placeholder="Search for a Van Gogh by title"
+          value={workTitle}
+          onChange={event => {
+            setWorkTitle(event.target.value);
+          }}
+        />  
+      </label>
+        <button 
+        className="clear-button"
+        onClick={(event) => {
+          event.preventDefault();
+          setWorkTitle("");
         }}
-      />  
-      <button onClick={(event) => {
-        event.preventDefault();
-        setWorkTitle("");
-        // filterWorks("");
-      }}
-      >Clear</button>
+        >Clear</button>
+      </div>
     </form>
   )
 }

@@ -1,0 +1,45 @@
+.form-container {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #c1121f;
+  padding-top: 5%;
+}
+
+.input {
+  height: 4vh;
+  width: 18vw;
+  color: white;
+  border-radius: 3px;
+  border: 2px;
+  margin-left: 3%;
+  margin-right: 5%;
+}
+
+.clear-button {
+  height: 4.5vh;
+  width: 5vw;
+  background-color: #c1121f;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  font-size: 20px;
+  margin-left: 7%;
+}
+
+.favorites-button {
+  height: 4.5vh;
+  background-color: #c1121f;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 10vw;
+  font-size: 20px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+}
