@@ -23,23 +23,23 @@ function App() {
         setFilteredWorks(data);
         setLoading(false);
       })
-      .catch((err) => setError(err))
+      .catch((err) => setError(err));
   }
 
   useEffect(() => {
-    getVanGoghWorks()
+    getVanGoghWorks();
   }, [])
 
   const updateFavorite = (id, isChecked) => {
     vanGoghData.map((work) => {
       if (work.objectID === id) {
         work.isFavorited = !isChecked;
-        return { ...work }
+        return { ...work };
       }
-      return work
+      return work;
     })
-    const favorites = vanGoghData.filter((work) => work.isFavorited === true)
-    setFavoritedWorks(favorites)
+    const favorites = vanGoghData.filter((work) => work.isFavorited)
+    setFavoritedWorks(favorites);
   }
 
   const filterWorks = (title) => {
