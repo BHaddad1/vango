@@ -1,14 +1,14 @@
 .form-container {
   height: 8vh;
-  width: 25vw;
+  width: 30vw;
   margin-left: 10%;
 }
 
 .input {
   height: 4vh;
-  width: 12vw;
+  width: 18vw;
   color: white;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 2px solid gray;
 }
 
@@ -17,6 +17,6 @@
   width: 5vw;
   background-color: #c1121f;
   color: white;
-  border-radius: 5px;
+  border-radius: 2px;
   border: none;
 }

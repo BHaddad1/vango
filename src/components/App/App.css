@@ -15,9 +15,13 @@
 
 .favorites-button {
   height: 4vh;
-  width: 5vw;
+  width: 7vw;
   background-color: #c1121f;
   color: white;
   border-radius: 5px;
   border: none;
+}
+
+.logo {
+  height: 30vh;
 }
