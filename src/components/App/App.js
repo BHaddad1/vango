@@ -1,46 +1,74 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import { fetchVanGoghData } from "../../APICalls/apiCalls";
 import "./App.css";
 import icon from "../../assets/logo.jpg";
 import Form from "../Form/Form";
 import Works from "../Works/Works";
 import CardDetails from "../CardDetails/CardDetails";
+import loadingGif from "../../assets/loadingGif.webp";
+import { Favorites } from "../Favorites/Favorites";
 
 function App() {
   const [vanGoghData, setVanGoghData] = useState([]);
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [favoritedWorks, setFavoritedWorks] = useState([]);
 
   const getVanGoghWorks = () => {
     fetchVanGoghData()
-      .then((data) => setVanGoghData(data))
-      .catch((err) => setError(err));
-  };
+      .then((data) => {
+        // data.map(work => {
+        //   work.isFavorited = false;
+        //   return work;
+        // })
+        setVanGoghData(data)
+        setLoading(false)
+      })
+      .catch((err) => setError(err))
+  }
 
   useEffect(() => {
-    setLoading(true);
-    getVanGoghWorks();
-    setLoading(false);
-  }, []);
-  console.log(vanGoghData);
+    getVanGoghWorks()
+  }, [])
+  // console.log(vanGoghData);
+
+  const updateFavorite = (id, isChecked) => {
+    vanGoghData.map((work) => {
+      if (work.objectID === id) {
+        work.isFavorited = !isChecked
+        return { ...work }
+      }
+      return work
+    })
+    // when adding to favorites array, check that key exists
+    const favorites = vanGoghData.filter((work) => work.isFavorited)
+    setFavoritedWorks(favorites)
+  }
 
   return (
     <div>
       <div className="header-container">
         <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
         <h1 className="header">VanGo</h1>
+        <Link to="/favorites">
+          <button>Favorites</button>
+        </Link>
       </div>
       <Switch>
         <Route exact path="/" render={() => (
           <Fragment>
             <Form />
+            {loading && <img src={loadingGif} alt="loading gif"/>}
+            {loading && <p className="loading-message">Loading, please hold.</p>}
             <Works vanGoghWorks={vanGoghData} />
           </Fragment>
           )}
         />
+        <Route exact path="/favorites" render={() => <Favorites workData={favoritedWorks}/> }/>
         <Route exact path="/:workId" render={({ match }) => {
-            return <CardDetails workID={match.params.workId} />;
+          const foundWork = vanGoghData.find(work => work.objectID === +match.params.workId)
+            return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
           }}
         />
       </Switch>
