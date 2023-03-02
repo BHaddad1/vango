@@ -23,23 +23,23 @@ function App() {
         setFilteredWorks(data);
         setLoading(false);
       })
-      .catch((err) => setError(err))
+      .catch((err) => setError(err));
   }
 
   useEffect(() => {
-    getVanGoghWorks()
+    getVanGoghWorks();
   }, [])
 
   const updateFavorite = (id, isChecked) => {
     vanGoghData.map((work) => {
       if (work.objectID === id) {
-        work.isFavorited = !isChecked
-        return { ...work }
+        work.isFavorited = !isChecked;
+        return { ...work };
       }
-      return work
+      return work;
     })
     const favorites = vanGoghData.filter((work) => work.isFavorited)
-    setFavoritedWorks(favorites)
+    setFavoritedWorks(favorites);
   }
 
   const filterWorks = (title) => {
@@ -50,15 +50,17 @@ function App() {
   return (
     <div>
       <div className="header-container">
-        <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
+        <Link to="/"> 
+          <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
+        </Link>
         <h1 className="header">VanGo</h1>
       </div>
       <Switch>
         <Route exact path="/" render={() => (
           <Fragment>
             <Form filterWorks={filterWorks} />
-            {loading && <img src={loadingGif} alt="loading gif"/>}
-            {loading && <p className="loading-message">Loading, please hold.</p>}
+            {loading && <img src={loadingGif} alt="Loading Gif" className="loading"/>}
+            {loading && <p className="loading">Loading, please hold.</p>}
             <Works vanGoghWorks={filteredWorks} updateFavorite={updateFavorite} />
           </Fragment>
           )}
