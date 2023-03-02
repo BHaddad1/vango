@@ -1,0 +1,33 @@
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  margin-top: 5%;
+}
+
+.primary-img {
+  height: 90vh;
+  width: 50vw;
+  align-items: center;
+}
+
+.work-details {
+  text-align: center;
+  color: white;
+}
+
+.favorite-details {
+  color: white;
+  margin-top: 15%;
+}
+
+.back-button { 
+  height: 4.5vh;
+  width: 10vw;
+  background-color: #c1121f;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  margin-top: 25 %;
+}
