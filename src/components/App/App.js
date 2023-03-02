@@ -59,8 +59,8 @@ function App() {
         <Route exact path="/" render={() => (
           <Fragment>
             <Form filterWorks={filterWorks} />
-            {loading && <img src={loadingGif} alt="loading gif"/>}
-            {loading && <p className="loading-message">Loading, please hold.</p>}
+            {loading && <img src={loadingGif} alt="Loading Gif" className="loading"/>}
+            {loading && <p className="loading">Loading, please hold.</p>}
             <Works vanGoghWorks={filteredWorks} updateFavorite={updateFavorite} />
           </Fragment>
           )}
