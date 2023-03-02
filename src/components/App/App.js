@@ -53,11 +53,6 @@ function App() {
         <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
         <h1 className="header">VanGo</h1>
       </div>
-      <Link to="/favorites">
-        <div className="favorites-button-container">
-          <button className="favorites-button">Favorites</button>
-        </div>
-      </Link>
       <Switch>
         <Route exact path="/" render={() => (
           <Fragment>

@@ -6,7 +6,7 @@ export default function Works({ vanGoghWorks, updateFavorite }) {
 
   const mappedVanGoghWorks = vanGoghWorks.filter(work => work.primaryImage).map(work => {
     return (
-      <div key={work.objectID}>
+      <div className="ind-card-container" key={work.objectID}>
           <Card 
             id={work.objectID}
             image={work.primaryImageSmall}
