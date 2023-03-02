@@ -50,7 +50,9 @@ function App() {
   return (
     <div>
       <div className="header-container">
-        <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
+        <Link to="/"> 
+          <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
+        </Link>
         <h1 className="header">VanGo</h1>
       </div>
       <Switch>
