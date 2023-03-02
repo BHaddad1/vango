@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   height: 28vh;
   width: 100vw;
   background-color: #333;
@@ -13,5 +13,5 @@
 }
 
 .header {
-  color: #cfe4ff
+  color: #cfe4ff;
 }

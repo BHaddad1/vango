@@ -1,9 +1,7 @@
 .favorite {
-  height: 2vh;
-  margin-left: 35%;
   margin-bottom: 4%;
   margin-top: 5%;
-  width: 25vw;
+  text-align: center;
 }
 
 label {
@@ -14,9 +12,9 @@ label {
   margin-bottom: 5%;
   border: 2px solid gray;
   width: 40vw;
-  margin-left: 33%;
+  margin-left: 30%;
   border-radius: 10px;
-  color: white;
+  color: black;
 }
 
 .card-image {
@@ -27,5 +25,5 @@ label {
 
 .card-title {
   text-align: center;
-  color: white;
+  color: black;
 }
