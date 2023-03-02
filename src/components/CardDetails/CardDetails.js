@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 export default function CardDetails({ workData, updateFavorite }) {
 
-  const [favorite, setFavorite] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
-  // console.log(workData);
+  const handleOnChange = () => {
+    setIsChecked(!isChecked)
+    updateFavorite(workData.objectID, isChecked)
+  }
 
   return (
     <div>
@@ -16,17 +19,13 @@ export default function CardDetails({ workData, updateFavorite }) {
       </div>
       <div>
         <label>
-          <input 
+          <input
             type="checkbox"
             name="favorite"
-            checked={favorite}
-            onChange={event => {
-              setFavorite(event.target.checked);
-              console.log("favorite in onChange", favorite)
-              updateFavorite(workData.objectID, !favorite);
-              console.log("event.target.checked", event.target.checked);
-            }}
-          />Favorite this work
+            checked={isChecked}
+            onChange={handleOnChange}
+          />
+          Favorite this work
         </label>
       </div>
       <img src={workData.primaryImage} alt={workData.title} className="primary-img"/>
