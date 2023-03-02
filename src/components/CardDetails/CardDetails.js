@@ -17,6 +17,9 @@ export default function CardDetails({ workData, updateFavorite }) {
         <Link to="/">
           <button className="back-button">Back Home</button>
         </Link>
+        <Link to="/favorites">
+          <button className="back-button">Favorites</button>
+        </Link>
       </div>
       <div className="details-container">
         {!workData.isFavorited && <div>

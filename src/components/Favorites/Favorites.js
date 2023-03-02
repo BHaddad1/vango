@@ -4,7 +4,7 @@ import Works from "../Works/Works";
 import "./Favorites.css";
 
 export function Favorites({ workData }) {
-  console.log(workData);
+
   return (
     <div>
       <div className="button-container-faves">

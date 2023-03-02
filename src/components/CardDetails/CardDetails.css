@@ -7,18 +7,20 @@
 
 .primary-img {
   height: 90vh;
-  width: 50vw;
+  width: 40vw;
   align-items: center;
 }
 
 .work-details {
   text-align: center;
   color: black;
+  font-weight: bold;
 }
 
 .favorite-details {
   color: black;
   margin-top: 15%;
+  margin-bottom: 15%;
 }
 
 .back-button { 
@@ -27,7 +29,7 @@
   color: white;
   border-radius: 5px;
   border: none;
-  width: 10vw;
+  width: 15vw;
   font-size: 20px;
   margin-left: 20%;
   margin-top: 4%;
@@ -36,4 +38,8 @@
 .button-container-details {
   height: 15vh;
   background-color: #c1121f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
