@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "./Card.css";
 
 
-export function Card({ id, image, title, updateFavorite }) {
+export function Card({ id, image, title, updateFavorite, workData }) {
 
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(workData.isFavorited);
 
   const handleOnChange = () => {
-    setIsChecked(!isChecked)
-    updateFavorite(id, isChecked)
+    setIsChecked(!isChecked);
+    updateFavorite(id, isChecked);
   }
 
   return (
@@ -18,7 +18,7 @@ export function Card({ id, image, title, updateFavorite }) {
         <label>
           <input
             type="checkbox"
-            name="favorite"
+            name="isChecked"
             checked={isChecked}
             onChange={handleOnChange}
           />
@@ -29,7 +29,7 @@ export function Card({ id, image, title, updateFavorite }) {
         <label>
           <input
             type="checkbox"
-            name="favorite"
+            name="isChecked"
             checked={isChecked}
             onChange={handleOnChange}
             className="favorite"
