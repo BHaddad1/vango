@@ -5,6 +5,8 @@ export default function CardDetails({ workData, updateFavorite }) {
 
   const [isChecked, setIsChecked] = useState(false);
 
+  console.log(workData)
+
   const handleOnChange = () => {
     setIsChecked(!isChecked)
     updateFavorite(workData.objectID, isChecked)
@@ -17,17 +19,30 @@ export default function CardDetails({ workData, updateFavorite }) {
           <button className="back-button">Back Home</button>
         </Link>
       </div>
-      <div>
+      {!isChecked && <div>
         <label>
           <input
             type="checkbox"
             name="favorite"
             checked={isChecked}
             onChange={handleOnChange}
+            className="favorite"
           />
-          Favorite this work
+          Add to Favorites
         </label>
-      </div>
+      </div>}
+      {isChecked && <div>
+        <label>
+          <input
+            type="checkbox"
+            name="favorite"
+            checked={isChecked}
+            onChange={handleOnChange}
+            className="favorite"
+          />
+          Remove from Favorites
+        </label>
+      </div>}
       <img src={workData.primaryImage} alt={workData.title} className="primary-img"/>
       <h2 className="title-details">{workData.title} by {workData.artistDisplayName}</h2>
       <p className="work-details">Gallery Number: {workData.GalleryNumber}</p>
