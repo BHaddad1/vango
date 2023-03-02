@@ -21,7 +21,7 @@ export default function CardDetails({ workData, updateFavorite }) {
         </Link>
       </div>
       <div className="details-container">
-        {!isChecked && <div>
+        {!workData.isFavorited && <div>
           <label className="favorite-details">
             <input
               type="checkbox"
@@ -33,7 +33,7 @@ export default function CardDetails({ workData, updateFavorite }) {
             Add to Favorites
           </label>
         </div>}
-        {isChecked && <div>
+        {workData.isFavorited && <div>
           <label className="favorite-details">
             <input
               type="checkbox"
