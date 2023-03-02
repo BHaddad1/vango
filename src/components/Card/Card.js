@@ -20,6 +20,7 @@ export function Card({ id, image, title, updateFavorite }) {
             name="favorite"
             checked={isChecked}
             onChange={handleOnChange}
+            className="favorite"
           />
           Add to Favorites
         </label>
@@ -31,6 +32,7 @@ export function Card({ id, image, title, updateFavorite }) {
             name="favorite"
             checked={isChecked}
             onChange={handleOnChange}
+            className="favorite"
           />
           Remove from Favorites
         </label>
