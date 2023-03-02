@@ -33,12 +33,12 @@ function App() {
   const updateFavorite = (id, isChecked) => {
     vanGoghData.map((work) => {
       if (work.objectID === id) {
-        work.isFavorited = !isChecked
+        work.isFavorited = !isChecked;
         return { ...work }
       }
       return work
     })
-    const favorites = vanGoghData.filter((work) => work.isFavorited)
+    const favorites = vanGoghData.filter((work) => work.isFavorited === true)
     setFavoritedWorks(favorites)
   }
 
