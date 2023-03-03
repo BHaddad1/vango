@@ -57,7 +57,7 @@ function App() {
         <h1 className="header">VanGo</h1>
       </div>
       <Switch>
-        <Route exact path="/vanGo" render={() => (
+        <Route exact path="/" render={() => (
           <Fragment>
             <Form filterWorks={filterWorks} />
             {loading && <img src={loadingGif} alt="Loading Gif" className="loading"/>}
@@ -67,8 +67,8 @@ function App() {
           </Fragment>
           )}
         />
-        <Route exact path="/favorites" render={() => <Favorites workData={favoritedWorks}/> }/>
-        <Route exact path="/:workId" render={({ match }) => {
+        <Route exact path="/vanGo/favorites" render={() => <Favorites workData={favoritedWorks}/> }/>
+        <Route exact path="/vanGo/:workId" render={({ match }) => {
           const foundWork = vanGoghData.find(work => work.objectID === +match.params.workId)
             return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
           }}
