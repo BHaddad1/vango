@@ -17,3 +17,11 @@
   font-size: 20px;
   height: 5vh;
 }
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+  
+.grow:hover { 
+  transform: scale(1.1); 
+}
