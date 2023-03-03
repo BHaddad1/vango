@@ -16,10 +16,10 @@ export default function CardDetails({ workData, updateFavorite }) {
     <div className="details">
       <div className="button-container-details"> 
         <Link to="/">
-          <button className="back-button">Back Home</button>
+          <button className="back-button grow">Back Home</button>
         </Link>
         <Link to="/favorites">
-          <button className="back-button">Favorites</button>
+          <button className="back-button grow">Favorites</button>
         </Link>
       </div>
       <div className="details-container">
@@ -46,7 +46,7 @@ export default function CardDetails({ workData, updateFavorite }) {
             Remove from Favorites
           </label>
         </div>}
-        <img src={workData.primaryImageSmall} alt={workData.title} className="primary-img"/>
+        <img src={workData.primaryImageSmall} alt={workData.title} className="primary-img grow"/>
         <h2 className="title-details">{workData.title} by {workData.artistDisplayName}</h2>
         <p className="work-details">Gallery Number: {workData.GalleryNumber}</p>
         <p className="work-details">Accession Year: {workData.accessionYear}</p>

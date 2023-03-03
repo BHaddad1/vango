@@ -14,7 +14,7 @@ export default function Form({ filterWorks }) {
   return (
     <form className="form-container">
        <Link to="/favorites">
-        <div className="favorites-button-container">
+        <div className="favorites-button-container grow">
           <button className="favorites-button">Favorites</button>
         </div>
       </Link>
@@ -32,7 +32,7 @@ export default function Form({ filterWorks }) {
         />  
       </label>
         <button 
-        className="clear-button"
+        className="clear-button grow"
         onClick={(event) => {
           event.preventDefault();
           setWorkTitle("");
