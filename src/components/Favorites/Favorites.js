@@ -9,7 +9,7 @@ export function Favorites({ workData }) {
     <div>
       <div className="button-container-faves">
         <Link to="/">
-          <button className="back-button-faves">Back Home</button>
+          <button className="back-button-faves grow">Back Home</button>
         </Link>
       </div>
       <Works vanGoghWorks={workData} />
