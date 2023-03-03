@@ -7,6 +7,7 @@ import Works from "../Works/Works";
 import CardDetails from "../CardDetails/CardDetails";
 import loadingGif from "../../assets/loadingGif.webp";
 import { Favorites } from "../Favorites/Favorites";
+import Error from "../Error/Error";
 import "./App.css";
 
 function App() {
@@ -56,7 +57,7 @@ function App() {
         <h1 className="header">VanGo</h1>
       </div>
       <Switch>
-        <Route exact path="/" render={() => (
+        <Route exact path="/vanGo" render={() => (
           <Fragment>
             <Form filterWorks={filterWorks} />
             {loading && <img src={loadingGif} alt="Loading Gif" className="loading"/>}
@@ -72,6 +73,7 @@ function App() {
             return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
           }}
         />
+        <Route path="/*" component={Error} />
       </Switch>
     </div>
   );
