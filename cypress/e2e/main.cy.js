@@ -1,6 +1,6 @@
 describe('Main Page', () => {
   beforeEach(() => {
-    cy.intercept("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/419570", {fixture: "vanGoghData"});
+    cy.intercept("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/459123", {fixture: "vanGoghData"});
     cy.visit("http://localhost:3000/");
   });
   it("Should have a header", () => {
