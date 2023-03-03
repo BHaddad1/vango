@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./CardDetails.css";
 
 export default function CardDetails({ workData, updateFavorite }) {
@@ -58,4 +59,9 @@ export default function CardDetails({ workData, updateFavorite }) {
       </div>
     </div>
   )
+}
+
+CardDetails.propTypes = {
+  workData: PropTypes.object.isRequired,
+  updateFavorite: PropTypes.func.isRequired
 }
