@@ -7,6 +7,7 @@ import Works from "../Works/Works";
 import CardDetails from "../CardDetails/CardDetails";
 import loadingGif from "../../assets/loadingGif.webp";
 import { Favorites } from "../Favorites/Favorites";
+import Error from "../Error/Error";
 import "./App.css";
 
 function App() {
@@ -67,11 +68,12 @@ function App() {
           )}
         />
         <Route exact path="/favorites" render={() => <Favorites workData={favoritedWorks}/> }/>
-        <Route exact path="/:workId" render={({ match }) => {
+        <Route exact path="/vanGo/:workId" render={({ match }) => {
           const foundWork = vanGoghData.find(work => work.objectID === +match.params.workId)
             return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
           }}
         />
+        <Route path="/*" component={Error} />
       </Switch>
     </div>
   );

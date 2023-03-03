@@ -1,0 +1,22 @@
+.error-message {
+  margin-top: 5%;
+  font-size: 40px;
+  margin-left: 40%
+}
+
+.error-container {
+  height: 10vh;
+  background-color: #c1121f;
+  padding-top: 5%;
+}
+
+.error-button {
+  height: 4.5vh;
+  background-color: #c1121f;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 20vw;
+  font-size: 20px;
+  margin-left: 10%;
+}
