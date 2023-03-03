@@ -67,7 +67,7 @@ function App() {
           </Fragment>
           )}
         />
-        <Route exact path="/vanGo/favorites" render={() => <Favorites workData={favoritedWorks}/> }/>
+        <Route exact path="/favorites" render={() => <Favorites workData={favoritedWorks}/> }/>
         <Route exact path="/vanGo/:workId" render={({ match }) => {
           const foundWork = vanGoghData.find(work => work.objectID === +match.params.workId)
             return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
