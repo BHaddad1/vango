@@ -6,7 +6,6 @@ export const fetchVanGoghData = () => {
     fetchIndividualWork(436535), 
     fetchIndividualWork(436528), 
     fetchIndividualWork(436532), 
-    fetchIndividualWork(459532), 
     fetchIndividualWork(459193),
     fetchIndividualWork(436529),
     fetchIndividualWork(436530),
