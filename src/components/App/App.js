@@ -61,6 +61,7 @@ function App() {
             <Form filterWorks={filterWorks} />
             {loading && <img src={loadingGif} alt="Loading Gif" className="loading"/>}
             {loading && <p className="loading">Loading, please hold.</p>}
+            {error && <p className="loading">Sorry, something went wrong. Please try again later.</p>}
             <Works vanGoghWorks={filteredWorks} updateFavorite={updateFavorite} />
           </Fragment>
           )}
