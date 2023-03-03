@@ -1,0 +1,99 @@
+{
+  "objectID": 419570,
+  "isHighlight": false,
+  "accessionNumber": "2012.492",
+  "accessionYear": "2012",
+  "isPublicDomain": false,
+  "primaryImage": "",
+  "primaryImageSmall": "",
+  "additionalImages": [],
+  "constituents": [
+    {
+      "constituentID": 100851,
+      "role": "Artist",
+      "name": "Jan Toorop",
+      "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500017535",
+      "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q369416",
+      "gender": ""
+    }
+  ],
+  "department": "Drawings and Prints",
+  "objectName": "Drawing",
+  "title": "Woman and Child Resting, a Man Working in the Field Beyond",
+  "culture": "",
+  "period": "",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "Artist",
+  "artistPrefix": "",
+  "artistDisplayName": "Jan Toorop",
+  "artistDisplayBio": "Dutch, Java 1858–1928 The Hague",
+  "artistSuffix": "",
+  "artistAlphaSort": "Toorop, Jan",
+  "artistNationality": "Dutch",
+  "artistBeginDate": "1850",
+  "artistEndDate": "1950",
+  "artistGender": "",
+  "artistWikidata_URL": "https://www.wikidata.org/wiki/Q369416",
+  "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500017535",
+  "objectDate": "1898",
+  "objectBeginDate": 1898,
+  "objectEndDate": 1898,
+  "medium": "Graphite, watercolor, white gouache",
+  "dimensions": "Sheet: 11 5/16 x 14 5/16 in. (28.8 x 36.4 cm)",
+  "measurements": [
+    {
+      "elementName": "Sheet",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Height": 28.8,
+        "Width": 36.4
+      }
+    }
+  ],
+  "creditLine": "Gift of Eric Gillis, 2012",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Drawings",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2022-10-20T04:55:06.267Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/419570",
+  "tags": [
+    {
+      "term": "Infants",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300189561",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q998"
+    },
+    {
+      "term": "Men",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+    },
+    {
+      "term": "Women",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+    },
+    {
+      "term": "Working",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300412186",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q6958747"
+    }
+  ],
+  "objectWikidata_URL": "",
+  "isTimelineWork": false,
+  "GalleryNumber": ""
+}
+
