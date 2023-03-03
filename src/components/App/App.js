@@ -73,7 +73,7 @@ function App() {
             return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
           }}
         />
-        <Route path="/*" component={Error} />
+        <Route path="*" component={Error} />
       </Switch>
     </div>
   );
