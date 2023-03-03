@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import { fetchVanGoghData } from "../../APICalls/apiCalls";
 import icon from "../../assets/logo.jpg";
@@ -7,6 +7,7 @@ import Works from "../Works/Works";
 import CardDetails from "../CardDetails/CardDetails";
 import loadingGif from "../../assets/loadingGif.webp";
 import { Favorites } from "../Favorites/Favorites";
+import Error from "../Error/Error";
 import "./App.css";
 
 function App() {
@@ -23,23 +24,23 @@ function App() {
         setFilteredWorks(data);
         setLoading(false);
       })
-      .catch((err) => setError(err))
+      .catch((err) => setError(err));
   }
 
   useEffect(() => {
-    getVanGoghWorks()
+    getVanGoghWorks();
   }, [])
 
   const updateFavorite = (id, isChecked) => {
     vanGoghData.map((work) => {
       if (work.objectID === id) {
-        work.isFavorited = !isChecked
-        return { ...work }
+        work.isFavorited = !isChecked;
+        return { ...work };
       }
-      return work
+      return work;
     })
     const favorites = vanGoghData.filter((work) => work.isFavorited)
-    setFavoritedWorks(favorites)
+    setFavoritedWorks(favorites);
   }
 
   const filterWorks = (title) => {
@@ -50,7 +51,11 @@ function App() {
   return (
     <div>
       <div className="header-container">
+<<<<<<< HEAD
         <Link to="/">
+=======
+        <Link to="/"> 
+>>>>>>> e66dcbb2464237281d9a082fde4625f1ab30f233
           <img src={icon} alt="Van Gogh Sunflowers" className="logo" />
         </Link>
         <h1 className="header">VanGo</h1>
@@ -59,18 +64,25 @@ function App() {
         <Route exact path="/" render={() => (
           <Fragment>
             <Form filterWorks={filterWorks} />
+<<<<<<< HEAD
             {loading && <img src={loadingGif} alt="loading gif" className="loading-gif"/>}
             {loading && <p className="loading-message">Loading, please hold.</p>}
+=======
+            {loading && <img src={loadingGif} alt="Loading Gif" className="loading"/>}
+            {loading && <p className="loading">Loading, please hold.</p>}
+            {error && <p className="loading">Sorry, something went wrong. Please try again later.</p>}
+>>>>>>> e66dcbb2464237281d9a082fde4625f1ab30f233
             <Works vanGoghWorks={filteredWorks} updateFavorite={updateFavorite} />
           </Fragment>
           )}
         />
         <Route exact path="/favorites" render={() => <Favorites workData={favoritedWorks}/> }/>
-        <Route exact path="/:workId" render={({ match }) => {
+        <Route exact path="/vanGo/:workId" render={({ match }) => {
           const foundWork = vanGoghData.find(work => work.objectID === +match.params.workId)
             return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
           }}
         />
+        <Route path="*" component={Error} />
       </Switch>
     </div>
   );

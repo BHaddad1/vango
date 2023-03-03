@@ -1,8 +1,8 @@
-import React from "react";
 import { Card } from "../Card/Card";
+import PropTypes from "prop-types";
 import "./Works.css";
 
-export default function Works({ vanGoghWorks, updateFavorite }) {
+export default function Works({ vanGoghWorks }) {
 
   const mappedVanGoghWorks = vanGoghWorks.filter(work => work.primaryImage).map(work => {
     return (
@@ -11,7 +11,6 @@ export default function Works({ vanGoghWorks, updateFavorite }) {
             id={work.objectID}
             image={work.primaryImageSmall}
             title={work.title}
-            updateFavorite={updateFavorite}
             workData={work}
           />
       </div>
@@ -23,4 +22,8 @@ export default function Works({ vanGoghWorks, updateFavorite }) {
      {mappedVanGoghWorks}
     </div>
   )
+}
+
+Works.propTypes = {
+  vanGoghWorks: PropTypes.array.isRequired
 }

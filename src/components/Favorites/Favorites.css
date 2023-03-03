@@ -9,12 +9,11 @@
 }
 
 .back-button-faves {
-  height: 4.5vh;
   width: 10vw;
   background-color: #c1121f;
   color: white;
   border-radius: 2px;
   border: none;
-  margin-top: 25%;
   font-size: 20px;
+  height: 5vh;
 }
