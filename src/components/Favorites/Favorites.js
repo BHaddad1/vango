@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Works from "../Works/Works";
+import PropTypes from "prop-types";
 import "./Favorites.css";
 
 export function Favorites({ workData }) {
@@ -14,4 +15,8 @@ export function Favorites({ workData }) {
       <Works vanGoghWorks={workData} />
     </div>
   )
+}
+
+Favorites.propTypes = {
+  workData: PropTypes.object.isRequired,
 }

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./Card.css";
 
 
@@ -12,4 +13,10 @@ export function Card({ id, image, title }) {
       </Link>
     </div>
   )
+}
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }

@@ -1,4 +1,5 @@
 import { Card } from "../Card/Card";
+import PropTypes from "prop-types";
 import "./Works.css";
 
 export default function Works({ vanGoghWorks }) {
@@ -21,4 +22,8 @@ export default function Works({ vanGoghWorks }) {
      {mappedVanGoghWorks}
     </div>
   )
+}
+
+Works.propTypes = {
+  vanGoghWorks: PropTypes.array.isRequired
 }
