@@ -8,6 +8,7 @@ import CardDetails from "../CardDetails/CardDetails";
 import loadingGif from "../../assets/loadingGif.webp";
 import { Favorites } from "../Favorites/Favorites";
 import Error from "../Error/Error";
+import { cleanVanGoghData } from "../../Utilities/utilities";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   const getVanGoghWorks = () => {
     fetchVanGoghData()
       .then((data) => {
+        const cleanedData = cleanVanGoghData(data);
         setVanGoghData(data);
         setFilteredWorks(data);
         setLoading(false);
