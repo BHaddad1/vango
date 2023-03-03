@@ -27,8 +27,6 @@ describe('Main Page', () => {
     cy.intercept("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/849054", {fixture: "appleTree"});
     cy.intercept("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/849052", {fixture: "gate"});
     cy.intercept("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/276299", {fixture: "letters"});
-    cy.intercept("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/", {fixture: ""});
-
     cy.visit("http://localhost:3000/");
   });
   it("Should have a header", () => {
