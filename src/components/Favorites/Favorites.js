@@ -18,5 +18,5 @@ export function Favorites({ workData }) {
 }
 
 Favorites.propTypes = {
-  workData: PropTypes.object.isRequired,
+  workData: PropTypes.array.isRequired,
 }
