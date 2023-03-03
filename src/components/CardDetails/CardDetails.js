@@ -7,6 +7,8 @@ export default function CardDetails({ workData, updateFavorite }) {
 
   const [isChecked, setIsChecked] = useState(workData.isFavorited);
 
+  console.log(workData);
+
   const handleOnChange = () => {
     setIsChecked(!isChecked)
     updateFavorite(workData.objectID, isChecked)
@@ -55,7 +57,7 @@ export default function CardDetails({ workData, updateFavorite }) {
         <p className="work-details">Department: {workData.department}</p>
         <p className="work-details">Credit Line: {workData.creditLine}</p>
         <p className="work-details">More information: {workData.objectURL}</p>
-        <p className="work-details">{workData.objectWikiData_URL && `More information: ${workData.objectWikiData_URL}`}</p>
+        <p className="work-details">{workData.objectWikidata_URL && `More information: ${workData.objectWikidata_URL}`}</p>
       </div>
     </div>
   )
