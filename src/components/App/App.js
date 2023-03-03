@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { Route, Switch, Link } from "react-router-dom";
 import { fetchVanGoghData } from "../../APICalls/apiCalls";
 import icon from "../../assets/logo.jpg";

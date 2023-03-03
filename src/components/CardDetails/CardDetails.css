@@ -8,6 +8,7 @@
 .primary-img {
   height: 90vh;
   width: 40vw;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
   align-items: center;
 }
 
@@ -29,10 +30,11 @@
   color: white;
   border-radius: 5px;
   border: none;
-  width: 15vw;
+  width: 10vw;
   font-size: 20px;
   margin-left: 20%;
   margin-top: 4%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .button-container-details {

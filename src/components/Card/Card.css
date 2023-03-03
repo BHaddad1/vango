@@ -18,9 +18,10 @@ label {
 }
 
 .card-image {
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
   margin-left: 6.5%;
   height: 85vh;
-  padding-top: 5%;
+  margin-top: 5%;
   width: 35vw;
 }
 

@@ -15,4 +15,6 @@
   border-radius: 2px;
   border: none;
   font-size: 20px;
+  height: 5vh;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
 }

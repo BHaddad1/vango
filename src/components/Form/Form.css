@@ -10,26 +10,29 @@
 
 .input {
   height: 4vh;
-  width: 18vw;
-  color: white;
+  width: 20vw;
+  color: black;
   border-radius: 3px;
   border: 2px;
   margin-left: 3%;
   margin-right: 5%;
+  font-size: 20px;
 }
 
-.clear-button {
+.clear-button,
+.favorites-button {
   height: 4.5vh;
-  width: 5vw;
+  width: 10vw;
   background-color: #c1121f;
   color: white;
   border-radius: 2px;
   border: none;
   font-size: 20px;
   margin-left: 7%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.favorites-button {
+/* .favorites-button {
   height: 4.5vh;
   background-color: #c1121f;
   color: white;
@@ -37,7 +40,8 @@
   border: none;
   width: 10vw;
   font-size: 20px;
-}
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+} */
 
 .search-container {
   display: flex;
