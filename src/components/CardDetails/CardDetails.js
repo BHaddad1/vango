@@ -7,8 +7,6 @@ export default function CardDetails({ workData, updateFavorite }) {
 
   const [isChecked, setIsChecked] = useState(workData.isFavorited);
 
-  console.log(workData);
-
   const handleOnChange = () => {
     setIsChecked(!isChecked)
     updateFavorite(workData.objectID, isChecked)
