@@ -1,0 +1,49 @@
+.button {
+  height: 4.5vh;
+  width: 10vw;
+  background-color: #c1121f;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  font-size: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+  width: 100vw;
+  background-color: #c1121f;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+  
+.grow:hover { 
+  transform: scale(1.1); 
+}
+
+.name {
+  margin-left: 38%;
+  font-size: 30px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  margin-left: 46%;
+  height: 4.5vh;
+  width: 10vw;
+  background-color: #c1121f;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  font-size: 20px;
+  margin-top: 1%;
+}

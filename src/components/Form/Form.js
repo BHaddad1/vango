@@ -39,6 +39,11 @@ export default function Form({ filterWorks }) {
         }}
         >Clear</button>
       </div>
+      <Link to="/about">
+        <div className="favorites-button-container grow">
+          <button className="favorites-button">About Me</button>
+        </div>
+      </Link>
     </form>
   )
 }
