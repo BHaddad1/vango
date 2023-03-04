@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# VanGo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Moved out of Manhattan? Really miss being a subway ride away from The Metropolitan Museum of Art now that you live in Denver, CO? Love Vincent van Gogh's artworks and not going to The Van Gogh Museum anytime soon? VanGo is the app for you! 
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+  - [Setup](#setup)
+  - [Technologies](#technologies)
+  - [Project Spec](#project-spec)
+  - [Abstract](#abstract)
+  - [Learning Goals](#learning-goals)
+  - [Preview](#preview)
+  - [WinsAndChallenges](#winsandchallenges)
+  - [Authors](#Authors)
+  - [FutureFeatures](#future-features)
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Clone down this repo [here](https://github.com/bhaddad1/vango)
+- Open in an IDE
+- On the command line, run: $ npm install
+- On the command line, run: $ npm start
+- Alternatively, click this link: [link]()
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
+  - React
+  - React Router (v5)
+  - Cypress
+  - Javascript
+  - RESTful API(s)
+  - CSS / HTML
+  - Git Version Control / GitHub
+  - Webpack node package
+  - VSCode
 
-### `npm test`
+  
+## Project Spec
+[Click here](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Abstract 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### VanGo is the perfect way to view Vincent van Gogh's works displayed at The Met...on the go. Is this a niche audience? Yep. Was it a dream app I really wanted to create? Yep again. 
+### On the main page, see van Gogh's works. Search for a work by title. Learn more about the work by clicking on the work's image or title. Save it to your favorites so all of your favorite works are in one page. Head over to the About Me page to learn more about me, the creator of VanGo. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Learning Goals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Solidify an understanding of React and React Router. 
+- Learn to write user stories/personas and allow them to guide the styling and functionality of an app.
 
-### `npm run eject`
+## Preview 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Home Page
+![Home](src/assets/main.gif)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Details Page
+![Details](src/assets/details.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Search Feature
+![Search](src/assets/search.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Favorite Feature
+![Favorite](src/assets/favorite.gif)
 
-## Learn More
+### About Me Page
+![About](src/assets/aboutMe.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## WinsAndChallenges
 
-### Code Splitting
+### Challenges
+- Building the funtionality for favoriting a work. For some reason, event.target.checked was not my friend. 
+- Building a cleaning function to clean the API data. Though it worked, the data was not being rendered or display, even though it was being stored in state. 
+- Stubbing the API data in Cypress (don't even look at it).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Wins
+- Using hooks instead of class-based components.
+- Implementing a favoriting feature after debugging it for five hours.
+- Implementing a search feature using hooks instead of setState. 
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future features
+- Building a backend server using Express instead of making MANY single API calls. 
+- Using more museum's data. 
+- Local storage. 
 
-### Making a Progressive Web App
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<table>
+   <tr>
+      <td> Blanche Haddad (they/them) <a href="https://www.linkedin.com/in/blanche-haddad-denver/">LinkedIn</td>
+    </tr>
+ <td><img src="https://avatars.githubusercontent.com/u/113555577?v=4" alt="Blanche Haddad"
+ width="150" height="auto" /></td>
+ 
+</table>
