@@ -80,7 +80,7 @@
 
 ## Future features
 - Building a backend server using Express instead of making MANY single API calls. 
-- Using more museum's data. 
+- Using more museums' data. 
 - Local storage. 
 
 ## Author
