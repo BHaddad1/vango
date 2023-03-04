@@ -23,6 +23,11 @@ export default function CardDetails({ workData, updateFavorite }) {
         <Link to="/favorites">
           <button className="back-button grow">Favorites</button>
         </Link>
+        <Link to="/about">
+        <div className="favorites-button-container grow">
+          <button className="favorites-button">About Me</button>
+        </div>
+      </Link>
       </div>
       <div className="details-container">
         {!workData.isFavorited && <div>
@@ -57,7 +62,14 @@ export default function CardDetails({ workData, updateFavorite }) {
         <p className="work-details">Department: {workData.department}</p>
         <p className="work-details">Credit Line: {workData.creditLine}</p>
         <p className="work-details">More information: {workData.objectURL}</p>
-        <p className="work-details">{workData.objectWikidata_URL && `More information: ${workData.objectWikidata_URL}`}</p>
+        <Link
+        to={{
+          pathname: `${workData.objectWikidata_URL}`,
+        }}
+        target="_blank"
+      >
+        <p className="work-details">More information: {workData.objectWikidata_URL}</p>
+      </Link>
       </div>
     </div>
   )
