@@ -40,8 +40,7 @@
 
 ## Abstract 
 
-### VanGo is the perfect way to view Vincent van Gogh's works displayed at The Met...on the go. Is this a niche audience? Yep. Was it a dream app I really wanted to create? Yep again. 
-### On the main page, see van Gogh's works. Search for a work by title. Learn more about the work by clicking on the work's image or title. Save it to your favorites so all of your favorite works are in one page. Head over to the About Me page to learn more about me, the creator of VanGo. 
+### VanGo is the perfect way to view Vincent van Gogh's works displayed at The Met...on the go. Is this a niche audience? Yep. Was it a dream app I really wanted to create? Yep again. On the main page, see van Gogh's works. Search for a work by title. Learn more about the work by clicking on the work's image or title. Save it to your favorites so all of your favorite works are in one page. Head over to the About Me page to learn more about me, the creator of VanGo. 
 
 ## Learning Goals
 
@@ -70,7 +69,7 @@
 
 ### Challenges
 - Building the funtionality for favoriting a work. For some reason, event.target.checked was not my friend. 
-- Building a cleaning function to clean the API data. Though it worked, the data was not being rendered or display, even though it was being stored in state. 
+- Building a cleaning function to clean the API data. Though it worked, the data was not being rendered or displaying, even though it was being stored in state. 
 - Stubbing the API data in Cypress (don't even look at it).
 
 ### Wins
