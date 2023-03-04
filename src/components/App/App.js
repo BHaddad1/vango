@@ -9,6 +9,7 @@ import loadingGif from "../../assets/loadingGif.webp";
 import { Favorites } from "../Favorites/Favorites";
 import Error from "../Error/Error";
 import { cleanVanGoghData } from "../../Utilities/utilities";
+import { About } from "../About/About";
 import "./App.css";
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
             return <CardDetails workID={match.params.workId} workData={foundWork} updateFavorite={updateFavorite} />;
           }}
         />
+        <Route path="/about" component={About} />
         <Route path="*" component={Error} />
       </Switch>
     </div>
