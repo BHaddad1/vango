@@ -20,7 +20,7 @@
 - Open in an IDE
 - On the command line, run: $ npm install
 - On the command line, run: $ npm start
-- Alternatively, click this link: [link]()
+- Alternatively, click this link: [link](https://vango-eta.vercel.app/)
 
 ## Technologies
   - React
