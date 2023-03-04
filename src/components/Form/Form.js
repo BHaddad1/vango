@@ -18,6 +18,11 @@ export default function Form({ filterWorks }) {
           <button className="favorites-button">Favorites</button>
         </div>
       </Link>
+      <Link to="/about">
+        <div className="favorites-button-container grow">
+          <button className="favorites-button">About Me</button>
+        </div>
+      </Link>
       <div className="search-container"> 
       <label>
         <input 
