@@ -12,8 +12,8 @@ export function Favorites({ workData }) {
           <button className="back-button-faves grow">Back Home</button>
         </Link>
         <Link to="/about">
-          <div className="favorites-button-container">
-            <button className="favorites-button grow">About Me</button>
+          <div>
+            <button className="back-button-faves grow">About Me</button>
           </div>
         </Link>
       </div>
