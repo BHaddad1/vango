@@ -25,7 +25,10 @@ function App() {
         setFilteredWorks(data);
         setLoading(false);
       })
-      .catch((err) => setError(err));
+      .catch((err) => {
+        setError(err);
+        setLoading(false);
+      });
   }
 
   useEffect(() => {
